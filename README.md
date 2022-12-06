@@ -7,7 +7,7 @@
 # Installation
 
 ```bash
-npm install webglplot
+npm install basicwebglplot
 ```
 
 # Use
