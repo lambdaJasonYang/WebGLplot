@@ -1,6 +1,6 @@
 {
   "name": "basicwebglplot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Extremely basic webgl plotting library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/userJY/webglplot.git"
+    "url": "git+https://github.com/userJY/WebGLplot.git"
   },
   "keywords": [
     "webgl",
@@ -47,6 +47,7 @@
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.3.0",
     "rollup": "^3.6.0",
+    "rollup-plugin-terser": "^7.0.2",
     "typedoc": "^0.23.21",
     "typedoc-plugin-missing-exports": "^1.0.0",
     "typedoc-umlclass": "^0.7.0",

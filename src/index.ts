@@ -26,12 +26,6 @@ const filterInf = (x : number[]) => {
     return x.filter(x => (x != Infinity && x != -Infinity));
 }
 
-const median = (arr) => {
-  if (!arr.length) return undefined;
-  const s = [...arr].sort((a, b) => a - b);
-  const mid = Math.floor(s.length / 2);
-  return s.length % 2 === 0 ? ((s[mid - 1] + s[mid]) / 2) : s[mid];
-};
 
 const normalize = (x) => {
     const cleanx = filterInf(x);
@@ -42,7 +36,7 @@ const normalize = (x) => {
 const createPoints = (x: number[],y :number[]) => {
     const cleanx : number[] = filterInf(x)
     const cleany : number[] = filterInf(y)
-    console.log("cleanedpt",cleanx,cleany)
+    // console.log("cleanedpt",cleanx,cleany)
     const xnormed : number = 2/Math.max(...cleanx);
     const ynormed : number = 2/Math.max(...cleany);
     const ret : number[] = [];
@@ -128,7 +122,7 @@ const drawScene= (gl: WebGL2RenderingContext, programInfo, buffers,delta, drawMo
         const aspect = canvasElem.clientWidth / canvasElem.clientHeight;
         const zNear = 0.1;
         const zFar = 100.0;
-        console.log(mat4)
+        // console.log(mat4)
         const projectionMatrix = mat4.create();
       
         // note: glmatrix.js always has the first argument
