@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/userJY/basicwebglplot.git"
+    "url": "git+https://github.com/userJY/webglplot.git"
   },
   "keywords": [
     "webgl",
