@@ -3,7 +3,7 @@
 ![LINES.png](LINES.png)
 
 * PROS: Extremely basic
-  * 9.83 kB unpacked size
+  * ~10 kB unpacked size
   * 1 single function `buildPlotWebGL`
 * CONS: cannot be used for any detailed/scientific plotting
   * No axes
