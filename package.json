@@ -1,0 +1,58 @@
+{
+  "name": "webglplot",
+  "version": "1.0.0",
+  "description": "Extremely basic webgl plotting library",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "rollup": "rollup --config rollup.config.js",
+    "build": "npm run clean && npm run rollup",
+    "clean": "npm run cleandist && npm run cleandocs",
+    "cleandist": "tsc --build --clean && rm -rf dist",
+    "cleandocs": "rm -rf docs",
+    "docs": "typedoc --options typedoc.json",
+    "viewdocs": "browser-sync start --server 'docs'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "pub": "npm run clean && npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/userJY/basicwebglplot.git"
+  },
+  "keywords": [
+    "webgl",
+    "plotting",
+    "plot"
+  ],
+  "author": "UserJY",
+  "license": "ISC",
+  "homepage": "https://userjy.github.io/",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@rollup/plugin-typescript": "^10.0.1",
+    "@storybook/addon-actions": "^6.5.14",
+    "@storybook/addon-essentials": "^6.5.14",
+    "@storybook/addon-interactions": "^6.5.14",
+    "@storybook/addon-links": "^6.5.14",
+    "@storybook/builder-webpack4": "^6.5.14",
+    "@storybook/html": "^6.5.14",
+    "@storybook/manager-webpack4": "^6.5.14",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.3.0",
+    "rollup": "^3.6.0",
+    "typedoc": "^0.23.21",
+    "typedoc-plugin-missing-exports": "^1.0.0",
+    "typedoc-umlclass": "^0.7.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "gl-matrix": "^3.4.3"
+  }
+}

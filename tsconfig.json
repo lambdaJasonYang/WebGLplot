@@ -1,0 +1,76 @@
+{
+  "compilerOptions": {
+        /* Basics */
+    "rootDir": "src",
+    "outDir": "./dist", /* output dir of emitted js files */
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "preserve",
+    "moduleResolution": "node",               /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    "baseUrl": ".",                           /* Base directory to resolve non-absolute module names. */
+    "lib": ["dom", "dom.iterable", "esnext"],
+    /* Stuff to keep true */
+    "allowSyntheticDefaultImports" : true,
+
+    "declaration": true, /*Generate *.d.ts files*/
+
+    /* JS libraries */
+    "allowJs": true,  /* Allow importing js libs */
+    "checkJs": true, /* infers types from js libraries and typechecks them*/
+    "maxNodeModuleJsDepth": 0, /* (ideal set 0) infer types from js libs in node_modules */
+    
+
+ 
+    /* Strict Typechecking */
+    "strict": false,                           /* Enable all strict type-checking options. */
+      /* Start strict type-checking options*/
+    // "noImplicitAny": false,                    /* Error on implied 'any' type. */
+    // "noImplicitThis": false,                   /* Error 'this' expressions w/ implied 'any' type. 'this' must be pointed to the class */
+    // "strictNullChecks": false,                 /* Checks `null` and `undefined` */
+    // "strictFunctionTypes": false,              /* Function parameters require types */
+    // "strictPropertyInitialization": false,     /* Class variables must be a Option type like `( string | undefined)` or must be initialized via class constructor */
+    // "strictBindCallApply": false,
+    // "useUnknownInCatchVariables" : false,   /* must check if error is really an error `if (err instanceof Error) {console.log(err.message);}`   */
+    
+    "alwaysStrict": true,                     /* Parse in strict mode and emit "use strict" for each source file. */
+      /* End strict type-checking options*/
+
+    "noImplicitOverride" : false, /* Class method inheritance must use `override` keyword, `override add(){..}` */
+
+    /* Additional Checks */
+    // "allowUnreachableCode" : false, /* commented out meaning it will only give us warnings*/
+    "noUnusedLocals": false,                   /* `const a = 6` is declared but never used */
+    "noUnusedParameters": false,               /* `function AddNine(x: number, bleh: string){..}` , param `bleh: string` is never used */
+    "noImplicitReturns": false,                /* All functions must return something  */
+    "noFallthroughCasesInSwitch": true,       /* Report errors for fallthrough cases in switch statement. */
+
+    /* API's interfaces */
+    "noPropertyAccessFromIndexSignature": false, /* `knight.hp` means interface must have `hp`.  
+                                                    Accessing JSON data requires us first build interface. */
+
+    /* Nextjs stuff  */
+    "forceConsistentCasingInFileNames": true, /* (true4nextjs) */
+    "noEmit": false, /* (true4nextjs) means typescript only typechecks, No JS file output */ 
+    "resolveJsonModule": true, //!! include json files by default in your project as a module
+    "isolatedModules" : true,     /* (true4nextjs) helps to resolve imports for single file builders like Babel */
+    "esModuleInterop": true,                  /* (true for nextjs) Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    "incremental": true,
+
+       
+    /* Etc */
+    "removeComments" : false ,
+
+    /* Source Map Options */
+    "sourceMap": true,                         /* writes .js.map, */
+    "inlineSourceMap": false,                  /* (mutual exclusive to `sourceMap`) write directly to .js files */
+    "inlineSources": true,                    /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
+
+    /*Typing*/ 
+    "skipLibCheck": true, /* skips checking *.d.ts of ALL node_modules/@types BUT type-checks if app depends on the module */
+    "typeRoots": ["src/@types","node_modules/@types"], /*List of folder to include type definition, default is `node_modules/@types/ */
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"], /* Specifies an array of filenames or patterns to include in the program. */
+  "exclude": ["dist","node_modules","storybook-static","stories" ,"docs", "doc", "jest.config.ts", "**/*.spec.ts"]  /* Specifies an array of filenames or patterns that should be skipped when resolving "include":[..] above */
+
+}
+
