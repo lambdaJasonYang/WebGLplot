@@ -1,5 +1,5 @@
 {
-  "name": "webglplot",
+  "name": "basicwebglplot",
   "version": "1.0.0",
   "description": "Extremely basic webgl plotting library",
   "main": "dist/index.js",
