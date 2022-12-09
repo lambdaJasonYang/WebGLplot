@@ -1,3 +1,4 @@
+[![npm version](https://img.shields.io/npm/v/basicwebglplot.svg?logo=npm)](http://npm.im/basicwebglplot)
 # Simple WebGL 2D Plotting
 
 ![LINES.png](LINES.png)
